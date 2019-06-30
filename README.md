@@ -4,7 +4,7 @@
 
 Install:
 
-    git clone git://github.com/adibis/nvim.git ~/.config/nvim
+    git clone https://github.com/Stevenmqnguyen/nvim.git ~/.config/nvim
     nvim +PlugInstall +qall
 
 Update:
