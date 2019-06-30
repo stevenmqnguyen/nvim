@@ -1,5 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-
 " Plugins {
     " ctrl-p is a fuzzy file finder.
     Plug 'kien/ctrlp.vim'
@@ -9,9 +8,19 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'morhetz/gruvbox'
     " neomake is a code linting tool that runs in the background.
     Plug 'neomake/neomake'
+    " NERDTree is a file system explorer"
+    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+    " a thin wrapper around GDB, LLDB and PDB. enhance debugging with syntax highlighting and source code navigation.
+    Plug 'sakhnik/nvim-gdb'
+    " an extensible and asynchronous completion framework for neovim/Vim8.
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
 " }
 
 call plug#end()
+
+
 
 " Map the leader key to ,
 let mapleader="\<SPACE>"
@@ -221,6 +230,12 @@ let mapleader="\<SPACE>"
         " FIXME: Preview opens to left and is very narrow
         let g:netrw_preview=1   " open previews vertically
     " }
-" }
+    " nerdTREE {
+        map <C-n> :NERDTreeToggle<CR>
+        "ctl-n to toggle tree"
+    " }
+    " deoplete {
+        let g:deoplete#enable_at_startup = 1
+    "  }
 
 " vim:set ft=vim sw=4 ts=4:
