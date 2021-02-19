@@ -20,7 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 call plug#end()
 
-
+let g:python3_host_prog = $HOME."/.pyenv/versions/neovim/bin/python"
 
 " Map the leader key to ,
 let mapleader="\<SPACE>"
@@ -28,7 +28,7 @@ let mapleader="\<SPACE>"
 " General {
     set noautoindent        " I indent my code myself.
     set nocindent           " I indent my code myself.
-    "set smartindent        " Or I let the smartindent take care of it.
+    set smartindent        " Or I let the smartindent take care of it.
     set breakindent         " Indent line-breaks at the same level as code.
 
     set ttimeoutlen=100
@@ -179,6 +179,9 @@ let mapleader="\<SPACE>"
     " neomake {
         let g:neomake_warning_sign={'text': '◆'}
         let g:neomake_error_sign={'text': '✗'}
+        let g:neomake_cpp_enabled_makers = ['gcc']
+        let g:neomake_cpp_gcc_maker = {
+            \ 'args': ['-std=c++14', '-Wall', '-Wextra', '-Weverything', '-pedantic', '-I/Users/stove/include']}
         autocmd! BufWritePost * Neomake
         nnoremap <Leader>n :lopen<CR>
     " }
