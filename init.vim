@@ -25,7 +25,6 @@ let mapleader="\<SPACE>"
     set nocindent           " I indent my code myself.
     set smartindent        " Or I let the smartindent take care of it.
     set breakindent         " Indent line-breaks at the same level as code.
-
     set ttimeoutlen=100
 " }
 

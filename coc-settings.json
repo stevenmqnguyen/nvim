@@ -1,7 +1,18 @@
 {
-    "suggest.echodocSupport": true,
-    "suggest.maxCompleteItemCount": 20,
-    "clangd.path": "/Users/stove/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
-    //To fix on MacOS not finding include with absolute path in compile_command.json
-    "clangd.arguments": ["--query-driver=/usr/local/bin/g++","--query-driver=/usr/local/Cellar/gcc/10.2.0_4/bin/g++-10"]
+  "suggest.echodocSupport": true,
+  "suggest.maxCompleteItemCount": 20,
+  "clangd.path": "/Users/stove/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
+  //To fix on MacOS not finding include with absolute path in compile_command.json
+  "clangd.arguments": [
+    "--query-driver=/usr/local/bin/g++",
+    "--query-driver=/usr/local/Cellar/gcc/10.2.0_4/bin/g++-10"
+  ],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx"
+  ]
 }
